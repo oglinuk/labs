@@ -16,6 +16,7 @@ def main():
 
     logfile_path = input('Please enter the filename:\n')
     with open('c:\\logs\\%s.txt' % (logfile_path), 'r') as logfileIN:
+
         for log in logfileIN.readlines():
             # log DateTime
             datetime = log[0:16]
@@ -30,7 +31,6 @@ def main():
             print('%s %s %s %s %s' % (datetime, name, levelname, value_priority, log_value))
             cur.execute('INSERT INTO tblLogs(log_DateTime, log_Name, log_Level, log_ValueType, log_Value) VALUES(%s, %s, %s, %s, %s)',
                                             (datetime, name, levelname, value_priority, log_value))
-
 
 if __name__ == '__main__':
     main()
