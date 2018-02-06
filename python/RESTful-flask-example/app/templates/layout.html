@@ -1,0 +1,29 @@
+<!-- Base template to inherit from -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/static/css/reset.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="/static/images/python.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+<body>
+    <!-- Body section -->
+    {% block body %}
+    {% endblock %}
+    <!-- Footer section -->
+    <footer class="footer">
+      <p>
+        01/30/2017 <a href="https://github.com/OGLinuk/">OGLinuk</a>
+      </p>
+    </footer>
+  </div>
+  <br>
+</body>
+</html>
