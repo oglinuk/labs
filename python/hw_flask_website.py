@@ -1,5 +1,5 @@
 from flask import Flask
-app = Flask(__name__)           # Initializing a Flask app
+app = Flask(__name__)               # Initializing a Flask app
 
 @app.route('/')                     # Handler for URL
 def hello_world():
