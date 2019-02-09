@@ -1,6 +1,6 @@
 import sys
 from app import app
-from flask import render_template, jsonify, abort
+from flask import render_template, jsonify, abort, make_response
 
 languages = [
     {
@@ -35,7 +35,7 @@ def serveLanguages():
     return jsonify({'languages': languages})
 
 # ../languages/[id] || [title] -> yields json of the specified entry(language)
-@app.route('/api/v1.0/languages/<int:language_id>', methods=['GET'])
+@app.route('/api/v1.0/languages/<int:language_id>', methods=['GET', 'POST'])
 def get_languages(language_id):
     language = [lang for lang in languages if lang['id'] == language_id]
     if len(language) == 0:
