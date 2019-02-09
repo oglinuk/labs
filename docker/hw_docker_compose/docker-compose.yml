@@ -1,0 +1,16 @@
+version: '3'
+services:
+  web:
+    depends_on:
+     - redis
+    build: ./app
+    ports:
+     - "5000:5000"
+    restart: always
+
+  redis:
+    image: "redis:alpine"
+    volumes:
+     - /docker/volumes/test_vol/_data
+    restart: always
+
