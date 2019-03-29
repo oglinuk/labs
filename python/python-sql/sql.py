@@ -17,6 +17,9 @@ def main():
     logfile_path = input('Please enter the filename:\n')
     with open('c:\\logs\\%s.txt' % (logfile_path), 'r') as logfileIN:
 
+        # The below way of splitting up the log values is NOT GOOD ~ PLEASE DO NOT DO THIS
+        # I only left it the way it was so that others can learn from the mistakes that I 
+        # have made. A better way of splitting up the log values is via str.split()
         for log in logfileIN.readlines():
             # log DateTime
             datetime = log[0:16]

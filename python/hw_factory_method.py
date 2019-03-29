@@ -1,6 +1,3 @@
-'''
-Factory method example
-'''
 import abc
 import urllib2
 from BeautifulSoup import BeautifulStoneSoup
