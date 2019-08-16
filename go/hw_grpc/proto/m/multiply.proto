@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+message MultiplyRequest {
+    uint64 a = 1;
+    uint64 b = 2;
+}
+
+message MultiplyResponse {
+    uint64 n = 1;
+}
+
+service MService {
+    rpc Multiply(MultiplyRequest) returns (MultiplyResponse);
+}
