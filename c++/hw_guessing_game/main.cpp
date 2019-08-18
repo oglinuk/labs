@@ -1,8 +1,6 @@
 #include <iostream>
 #include <time.h>
 
-using namespace std;
-
 void Play();
 bool Again();
 
@@ -25,19 +23,19 @@ void Play() {
     int guess = -1;
 
     do {
-        cout << "Guess: ";
-        cin >> guess;
+        std::cout << "Guess: ";
+        std::cin >> guess;
 
         if (guess != rngNum) {
             if (guess > rngNum) {
-                cout << "Guess was too high!\n";
+                std::cout << "Guess was too high!\n";
             } else {
-                cout << "Guess was too low!\n";
+                std::cout << "Guess was too low!\n";
             }
             guesses++;
         } else {
             guesses++;
-            cout << "You win! It took you " << guesses << " guesses.\n";
+            std::cout << "You win! It took you " << guesses << " guesses.\n";
         }
     } while (guess != rngNum);
 }
@@ -45,8 +43,8 @@ void Play() {
 bool Again() {
     char ans = 'n';
     
-    cout << "Play again? [y/N]: ";
-    cin >> ans;
+    std::cout << "Play again? [y/N]: ";
+    std::cin >> ans;
 
     if (ans == 'y') {
         return true;

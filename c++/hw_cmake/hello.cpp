@@ -1,8 +1,6 @@
 #include <iostream> // System defined header file
 #include "hello.h" // User defined header file
 
-using namespace std;
-
 void Hello::printHello() {
-    cout << "Hello world from CMake example!\n";
+    std::cout << "Hello world from CMake example!\n";
 }
