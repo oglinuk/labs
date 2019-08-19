@@ -19,7 +19,7 @@ def get_hit_count():
 @app.route('/')
 def serve_hello():
     count = get_hit_count()
-    return 'Hello World from docker-compose! I have been seen {} times.\n'.format(count)
+    return 'Hello world from Docker-compose! I have been seen {} times.\n'.format(count)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=9001, debug=True)
