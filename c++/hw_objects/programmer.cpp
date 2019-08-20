@@ -7,5 +7,5 @@ void Programmer::Speak() const {
 }
 
 void Programmer::Cry() const {
-    std::cout << "Why won't you work :*(" << std::endl;
+    std::cout << "Why won't you work. :*(\n";
 }

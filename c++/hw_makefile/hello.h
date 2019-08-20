@@ -1,4 +1,4 @@
 class Hello {
-public:
-    void printHello();
+    public:
+        void printHello();
 };

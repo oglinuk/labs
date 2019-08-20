@@ -8,7 +8,7 @@ int main() {
     
     std::cin >> name;
 
-    std::cout << "Hello " << name << " from C++!" << std::endl;
+    std::cout << "Hello " << name << " from C++!\n";
 
     return 0;
 }

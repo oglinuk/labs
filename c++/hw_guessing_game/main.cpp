@@ -1,30 +1,30 @@
 #include <iostream>
 #include <time.h>
 
-void Play();
-bool Again();
+void play();
+int32_t getGuess();
+bool again();
 
 int main() {
     bool doAgain;
 
-    do {
+    while(doAgain == 1){
         system("clear");
-        Play();
-        doAgain = Again();
-    } while (doAgain == 1);
+        play();
+        doAgain = again();
+    };
 
     return 0;
 }
 
-void Play() {
+void play() {
     srand(time(NULL)); // Setting the seed
-    int rngNum = rand() % 10; // Generate random number between 0-10
-    int guesses = 0;
-    int guess = -1;
+    int32_t rngNum = rand() % 10; // Generate random number between 0-10
+    int32_t guesses = 0;
+    int32_t guess = -1;
 
-    do {
-        std::cout << "Guess: ";
-        std::cin >> guess;
+     while(guess != rngNum) {
+        guess = getGuess();
 
         if (guess != rngNum) {
             if (guess > rngNum) {
@@ -37,16 +37,33 @@ void Play() {
             guesses++;
             std::cout << "You win! It took you " << guesses << " guesses.\n";
         }
-    } while (guess != rngNum);
+    };
 }
 
-bool Again() {
+int32_t getGuess() {
+    int32_t guess = -1;
+
+    std::cout << "Guess: ";
+    std::cin >> guess;
+
+    while(std::cin.fail()) {
+        std::cout << "Please enter a number ...\n";
+        std::cin.clear(); // Unset failbit; see std::cin.fail()
+
+        // https://en.cppreference.com/w/cpp/io/basic_istream/ignore
+        std::cin.ignore(256,'\n');
+    }
+
+    return guess;
+}
+
+bool again() {
     char ans = 'n';
     
     std::cout << "Play again? [y/N]: ";
     std::cin >> ans;
 
-    if (ans == 'y') {
+    if(std::tolower(ans) == 'y') {
         return true;
     }
             
