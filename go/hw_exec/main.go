@@ -3,7 +3,6 @@ package main
 import (
 	"bytes"
 	"fmt"
-	"log"
 	"os/exec"
 )
 
@@ -14,9 +13,8 @@ func main() {
 
 	cmd.Stdout = &out
 
-	err := cmd.Run()
-	if err != nil {
-		log.Fatal(err)
+	if err := cmd.Run(); err != nil {
+		panic(err)
 	}
 
 	fmt.Println(out.String())
