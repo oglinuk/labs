@@ -2,5 +2,5 @@
 #include "hello.h" // User defined header file
 
 void Hello::printHello() {
-    std::cout << "Hello world from CMake example!\n";
+    std::cout << "Hello world from the CMake example!\n";
 }
