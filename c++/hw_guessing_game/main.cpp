@@ -1,12 +1,11 @@
 #include <iostream>
-#include <time.h>
 
 void play();
 int32_t getGuess();
 bool again();
 
 int main() {
-    bool doAgain;
+    bool doAgain = 1;
 
     while(doAgain == 1){
         system("clear");

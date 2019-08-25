@@ -1,8 +1,4 @@
 #include <iostream>
-#include <stdio.h>
-#include <stdlib.h>
-#include <errno.h>
-#include <sys/types.h>
 #include <sys/inotify.h>
 #include <unistd.h>
 
@@ -12,28 +8,27 @@
 #define BUF_LEN MAX_EVENT*(EVENT_SIZE+NAME_LEN)
 
 int main(int argc, char const *argv[]) {
+
+    return 0;
+}
+
+void observe(char const *path) {
     int fd, wd, i, length;
     char buffer[BUF_LEN];
-
-    if(argc < 2) {
-        printf("Usage: ./main <dir/file> ...\n");
-        return -1;
-    }
 
     fd = inotify_init();
     if(fd < 0) {
         perror("inotify_init");
     }
 
-    wd = inotify_add_watch(fd, argv[1],
+    wd = inotify_add_watch(fd, path,
                             IN_MODIFY | IN_CREATE | IN_DELETE);
 
     if(wd == -1) {
         perror("wd");
     } else {
-        printf("Starting watch on %s ...\n", argv[1]);
+        printf("Starting watch on %s ...\n", path);
     }
-
 
     while(1) {   
         i = 0;
@@ -49,6 +44,8 @@ int main(int argc, char const *argv[]) {
                 if(event->mask & IN_CREATE) {
                     if(event->mask & IN_ISDIR) {
                         printf("The directory %s was created ...\n", event->name);
+                        const char n = event->name;
+                        observe(&n);
                     } else {
                         printf("The file %s was created ...\n", event->name);
                     }
@@ -73,5 +70,4 @@ int main(int argc, char const *argv[]) {
     }
     inotify_rm_watch(fd, wd);
     close(fd);
-    return 0;
 }
