@@ -2,5 +2,5 @@
 
 
 void cppProgrammer::Cry() const {
-    std::cout << "Why won't my C++ compile. :*(\n";
+    printf("Why won't my C++ compile. :*(\n");
 }

@@ -37,17 +37,17 @@ void initDaemon() {
         exit(1);
     }
 
-    std::cout << "Starting daemon process " << sid << " ...\n";
-
     // Closing file descriptors
     close(STDIN_FILENO);
     close(STDOUT_FILENO);
     close(STDERR_FILENO);
 
+    syslog(LOG_INFO, "Starting daemon process %d ...", sid);
+
     // Infinite loop
     while(1) {
         // cat /var/log/syslog | grep hwd (ubuntu)
-        syslog(LOG_INFO, "Hello world from the %d C++ daemon!", sid);
+        syslog(LOG_INFO, "Hello world from the %d C++ hw_daemon example!", sid);
         sleep(42);
         exit(0);
     }

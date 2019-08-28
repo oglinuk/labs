@@ -2,5 +2,5 @@
 
 
 void goProgrammer::Cry() const {
-    std::cout << "Rob, Robert, and Ken are a blessing. :*(\n";
+    printf("Rob, Robert, and Ken are a blessing. :*(\n");
 }

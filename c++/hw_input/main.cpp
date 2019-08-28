@@ -4,11 +4,11 @@
 int main() {
     std::string name;
 
-    std::cout << "Enter your name: ";
+    printf("Enter your name: ");
     
     std::cin >> name;
 
-    std::cout << "Hello " << name << " from C++!\n";
+    printf("Hello %s from the C++ hw_input example!\n", name);
 
     return 0;
 }

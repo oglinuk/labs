@@ -2,10 +2,9 @@
 
 
 void Programmer::Speak() const {
-    std::cout << "Hi my name is " << this->name << 
-                " and I program in " << this->language << std::endl;
+    printf("Hi my name is %s and I program in %s\n", this->name, this->language);
 }
 
 void Programmer::Cry() const {
-    std::cout << "Why won't you work. :*(\n";
+    printf("Why won't you work. :*(\n");
 }

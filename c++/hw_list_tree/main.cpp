@@ -43,7 +43,7 @@ void list_tree(const char * root) {
                                         "%s/%s", root, entry->d_name);
                 printf("%s\n", path);
                 if(path_length >= PATH_MAX) {
-                    fprintf (stderr, "Path length has got too long.\n");
+                    fprintf(stderr, "Path length has got too long.\n");
                     exit(1);
                 }
                 /* Recursively call "list_dir" with the new path. */

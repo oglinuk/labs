@@ -6,18 +6,18 @@ int main() {
     std::ifstream hwiFile("hwFiles.txt");
 
     if (hwoFile.is_open()) {
-        hwoFile << "Hello world from C++ hw_files!\n";
+        hwoFile << "Hello world from the C++ hw_files example!\n";
 
         if (hwiFile.is_open()) {
             std::cout << hwiFile.rdbuf();
             hwiFile.close();
         } else {
-            std::cout << "Failed to open hwiFile ...\n";
+            printf("Failed to open hwiFile ...\n");
         }
 
         hwoFile.close();
     } else {
-        std::cout << "Failed to open hwoFile ...\n";
+        printf("Failed to open hwoFile ...\n");
     }
 
     return 0;

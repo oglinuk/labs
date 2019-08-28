@@ -1,8 +1,6 @@
 #include <string>
 #include <unistd.h>
 
-void printSomething(std::string who, int i);
-
 int main() {
     // https://linux.die.net/man/2/fork
     fork();

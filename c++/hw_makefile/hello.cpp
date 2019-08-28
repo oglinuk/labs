@@ -1,6 +1,5 @@
-#include <iostream> // System defined header file
-#include "hello.h" // User defined header file
+#include "hello.h"
 
 void Hello::printHello() {
-    std::cout << "Hello world from Makefile example!\n";
+    printf("Hello world from the C++ hw_makefile example!\n");
 }

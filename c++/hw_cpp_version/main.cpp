@@ -1,7 +1,6 @@
 #include <iostream>
 
 int main() {
-    std::cout << __cplusplus << std::endl;
-
+    printf("C++ version: %s\n", __cplusplus);
     return 0;
 }

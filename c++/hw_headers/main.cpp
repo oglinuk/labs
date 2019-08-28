@@ -1,4 +1,4 @@
-#include "main.h"
+#include "main.h" // User header
 
 int main() {
     sayHello();
@@ -9,5 +9,5 @@ int main() {
 // Notice how we dont need to declare the sayHello function above the main
 // or #include <iostream>, this is because it is in main.h
 void sayHello() {
-    std::cout << "Hello world from the C++ headers example!\n";
+    printf("Hello world from the C++ hw_headers example!\n");
 }

@@ -27,14 +27,14 @@ void play() {
 
         if (guess != rngNum) {
             if (guess > rngNum) {
-                std::cout << "Guess was too high!\n";
+                printf("Guess was too high!\n");
             } else {
-                std::cout << "Guess was too low!\n";
+                printf("Guess was too low!\n");
             }
             guesses++;
         } else {
             guesses++;
-            std::cout << "You win! It took you " << guesses << " guesses.\n";
+            printf("You win! It took you %d guesses.\n", guesses);
         }
     };
 }
@@ -42,7 +42,7 @@ void play() {
 int32_t getGuess() {
     int32_t guess = -1;
 
-    std::cout << "Guess: ";
+    printf("Guess: ");
     std::cin >> guess;
 
     while(std::cin.fail()) {
@@ -59,9 +59,9 @@ int32_t getGuess() {
 bool again() {
     char ans = 'n';
     
-    std::cout << "Play again? [y/N]: ";
+    printf("Play again? [y/N]: ");
     std::cin >> ans;
-
+    
     if(std::tolower(ans) == 'y') {
         return true;
     }
