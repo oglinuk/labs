@@ -1,0 +1,22 @@
+package main
+
+import (
+	"log"
+	"net/http"
+
+	"github.com/gin-gonic/gin"
+)
+
+func main() {
+	g := gin.Default()
+
+	g.GET("/", HelloHandler)
+
+	if err := g.Run("0.0.0.0:9001"); err != nil {
+		log.Fatalf("Failed to run gin server: %v", err)
+	}
+}
+
+func HelloHandler(ctx *gin.Context) {
+	ctx.JSON(http.StatusOK, "Hello world from the Golang hw_gin_api example!")
+}
