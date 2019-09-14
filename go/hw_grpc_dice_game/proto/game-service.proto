@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+message TurnRequest {
+    int32 roll = 1;
+}
+
+message TurnResponse {
+    int32 clientRoll = 1;
+    int32 serverRoll = 2;
+    bool won = 3;
+}
+
+service DiceGameService {
+    rpc Play(TurnRequest) returns (TurnResponse);
+}
