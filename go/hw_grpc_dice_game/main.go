@@ -9,7 +9,7 @@ import (
 	"os"
 	"time"
 
-	gpb "../proto"
+	gpb "./proto" //"github.com/OGLinuk/ptp/go/hw_grpc_dice_game/proto"
 	"google.golang.org/grpc"
 )
 
@@ -46,12 +46,16 @@ func play() {
 	}
 }
 
-func main() {
-	SHOST := "0.0.0.0"
-	SPORT := 9001
+func init() {
+	gRPCServerInit()
+}
 
-	log.Printf("Client connected to grpc server on %s:%d ...", SHOST, SPORT)
-	conn, err := grpc.Dial(fmt.Sprintf("%s:%d", SHOST, SPORT), grpc.WithInsecure())
+func main() {
+	HOST := "0.0.0.0"
+	PORT := 8001
+
+	log.Printf("Client connected to grpc server on %s:%d ...", HOST, PORT)
+	conn, err := grpc.Dial(fmt.Sprintf("%s:%d", HOST, PORT), grpc.WithInsecure())
 	if err != nil {
 		panic(err)
 	}

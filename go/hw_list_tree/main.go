@@ -19,6 +19,7 @@ func main() {
 	}
 }
 
+// Source: https://stackoverflow.com/a/49233329
 func listTree(rootBase, currentBase string) error {
 	files, err := ioutil.ReadDir(rootBase)
 	if err != nil {

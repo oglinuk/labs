@@ -21,6 +21,7 @@ func main() {
 	}
 }
 
+// Source: https://stackoverflow.com/a/29444042
 func scanLargeFile(filename string) error {
 	// os.Open is better since ioutil.ReadFile
 	// stores in memory which is bad for files > 1GB
