@@ -7,6 +7,12 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+func HelloHandler(ctx *gin.Context) {
+	ctx.JSON(http.StatusOK, gin.H{
+		"Hello": "world from the go hw_gin_api example!",
+	})
+}
+
 func main() {
 	g := gin.Default()
 
@@ -15,8 +21,4 @@ func main() {
 	if err := g.Run("0.0.0.0:9001"); err != nil {
 		log.Fatalf("Failed to run gin server: %v", err)
 	}
-}
-
-func HelloHandler(ctx *gin.Context) {
-	ctx.JSON(http.StatusOK, "Hello world from the Golang hw_gin_api example!")
 }
