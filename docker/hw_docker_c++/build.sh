@@ -1,5 +1,5 @@
 echo "Building docker image ..."
-sudo docker build . -t cpp-docker
+docker build . -t cpp-docker
 
 echo "Starting docker container ..."
-sudo docker run cpp-docker
+docker run cpp-docker

@@ -1,5 +1,5 @@
 echo "Building docker image ..."
-sudo docker build . -t python-docker
+docker build . -t python-docker
 
 echo "Starting docker container ..."
-sudo docker run python-docker
+docker run python-docker
