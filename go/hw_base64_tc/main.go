@@ -88,11 +88,6 @@ func init() {
 		log.Printf("main.go::init::os.OpenFile::ERROR: %s", err.Error())
 	}
 
-<<<<<<< HEAD
-=======
-	//defer f.Close()
-
->>>>>>> 519cdb7cd019ae7e7189670b8129e7fc603e7146
 	log.SetOutput(f)
 
 	log.Println("Successfully initialized the logger ...")
