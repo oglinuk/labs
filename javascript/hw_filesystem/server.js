@@ -4,6 +4,7 @@ var port = '9001';
 
 http.createServer(function(req, resp) {
     fs.readFile('index.html', function(err, data) {
+        if(err) console.log(`Error: ${err}`);
         resp.writeHead(200, {'Content-Type': 'text/html'});
         resp.end(data);
     });
