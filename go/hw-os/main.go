@@ -21,5 +21,5 @@ func main() {
 	}
 	defer cf.Close()
 
-	cf.WriteString("world from hw_os example!")
+	cf.WriteString("world from hw-os example!")
 }

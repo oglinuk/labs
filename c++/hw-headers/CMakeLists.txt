@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(hw_headers)
+project(hw-headers)
 
 add_executable(
     main

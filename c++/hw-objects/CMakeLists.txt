@@ -1,6 +1,6 @@
 cmake_minimum_required (VERSION 3.10)
 
-project (hw_object_example)
+project (hw-object-example)
 
 add_executable(
     main

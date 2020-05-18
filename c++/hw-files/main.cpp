@@ -6,7 +6,7 @@ int main() {
     std::ifstream hwiFile("hwFiles.txt");
 
     if (hwoFile.is_open()) {
-        hwoFile << "Hello world from the C++ hw_files example!\n";
+        hwoFile << "Hello world from the C++ hw-files example!\n";
 
         if (hwiFile.is_open()) {
             std::cout << hwiFile.rdbuf();

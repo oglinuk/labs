@@ -9,7 +9,7 @@ import (
 
 func HelloHandler(ctx *gin.Context) {
 	ctx.JSON(http.StatusOK, gin.H{
-		"Hello": "world from the go hw_gin_api example!",
+		"Hello": "world from the go hw-gin-api example!",
 	})
 }
 

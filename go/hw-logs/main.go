@@ -7,7 +7,7 @@ import (
 
 // Source: https://yourbasic.org/golang/log-to-file/
 func main() {
-	f, err := os.OpenFile("hw_logs.log",
+	f, err := os.OpenFile("hw-logs.log",
 		os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
 		log.Println(err)
@@ -16,5 +16,5 @@ func main() {
 
 	log.SetOutput(f)
 
-	log.Println("Hello world from hw_logs!")
+	log.Println("Hello world from hw-logs!")
 }

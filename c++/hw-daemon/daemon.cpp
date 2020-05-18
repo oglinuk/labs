@@ -47,7 +47,7 @@ void initDaemon() {
     // Infinite loop
     while(1) {
         // cat /var/log/syslog | grep hwd (ubuntu)
-        syslog(LOG_INFO, "Hello world from the %d C++ hw_daemon example!", sid);
+        syslog(LOG_INFO, "Hello world from the %d C++ hw-daemon example!", sid);
         sleep(42);
         exit(0);
     }

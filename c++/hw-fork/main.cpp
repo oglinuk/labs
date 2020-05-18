@@ -2,11 +2,11 @@
 #include <unistd.h>
 
 int main() {
-    // https://linux.die.net/man/2/fork
+    // man fork
     fork();
     fork();
     fork();
-    printf("Hello world from hw_fork!\n");
+    printf("Hello world from hw-fork!\n");
 
     return 0;
 }
