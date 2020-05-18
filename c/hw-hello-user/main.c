@@ -1,8 +1,3 @@
-/* Simple program that echo's the user's name
- *
- * OGLinuk 2020
- */
-
 #include <stdio.h>
 
 int main() {

@@ -3,19 +3,19 @@
 void initDaemon() {
     pid_t pid, sid;
 
-    // https://linux.die.net/man/3/syslog
-    openlog("hwd", LOG_PID | LOG_NDELAY, 0);
+    // man syslog
+    openlog("hw-daemon", LOG_PID | LOG_NDELAY, 0);
 
     // Fork the parent process
     pid = fork();
 
-    if(pid < 0) {
+    if (pid < 0) {
         syslog(LOG_ERR, "Failed to fork the parent process ...");
         exit(1);
     }
 
     // If successful; exit parent process
-    if(pid > 0) {
+    if (pid > 0) {
         syslog(LOG_INFO, "Successfully created process %d", pid);
         exit(0);
     }
@@ -26,13 +26,13 @@ void initDaemon() {
 
     // Create session ID for the child process
     sid = setsid();
-    if(sid < 0) {
+    if (sid < 0) {
         syslog(LOG_ERR, "Failed to create session ID ...");
         exit(1);
     }
 
     // Change to the root dir
-    if(chdir("/") < 0) {
+    if (chdir("/") < 0) {
         syslog(LOG_ERR, "Failed to change to root dir ...");
         exit(1);
     }
@@ -44,11 +44,7 @@ void initDaemon() {
 
     syslog(LOG_INFO, "Starting daemon process %d ...", sid);
 
-    // Infinite loop
-    while(1) {
-        // cat /var/log/syslog | grep hwd (ubuntu)
-        syslog(LOG_INFO, "Hello world from the %d C++ hw-daemon example!", sid);
-        sleep(42);
-        exit(0);
-    }
+	// cat /var/log/syslog (debian)
+	syslog(LOG_INFO, "Hello world from the %d C++ hw-daemon example!", sid);
+	exit(0);
 }

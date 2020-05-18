@@ -6,7 +6,7 @@ int main(int argc, char const *argv[]) {
         return 1;
     }
 
-    for (int i = 0; i < argc; i++) {
+    for (int i = 1; i < argc; i++) {
         printf("Arg%d: %s\n", i, argv[i]);
     }
 

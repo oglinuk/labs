@@ -1,6 +1,6 @@
 #include <iostream>
 
 int main() {
-    printf("C++ version: %s\n", __cplusplus);
+    printf("Hello world from C++ version: %ld!\n", __cplusplus);
     return 0;
 }

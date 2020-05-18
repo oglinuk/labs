@@ -1,13 +1,8 @@
-/* Simple program to showcase a function other than main
- *
- * OGLinuk 2020
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
-_Bool is_larger(int n) {
+int is_larger(int n) {
 	if(n > 42) {
 		return 1;
 	}

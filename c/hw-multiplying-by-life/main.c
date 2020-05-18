@@ -1,8 +1,3 @@
-/* This is a simple program that outputs the given number * 42
- *
- * OGLinuk 2020
- */
-
 #include <stdio.h>
 
 int main() {

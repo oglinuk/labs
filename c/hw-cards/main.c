@@ -1,8 +1,3 @@
-/* Card counting game in C
- *
- * OGLinuk 2020
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>

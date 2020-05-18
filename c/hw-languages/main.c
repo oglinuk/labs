@@ -1,8 +1,3 @@
-/* Simple program to showcase switch statements
- *
- * OGLinuk 2020
- */
-
 #include <stdio.h>
 
 int main() {
