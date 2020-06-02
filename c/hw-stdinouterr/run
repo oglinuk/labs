@@ -1,0 +1,6 @@
+#!/bin/sh
+
+make
+./gendata
+./filter data.csv unknown known
+./csv2json < unknown > unknown.json | ./csv2json < known > known.json
