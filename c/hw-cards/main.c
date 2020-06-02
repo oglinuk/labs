@@ -3,7 +3,8 @@
 #include <ctype.h>
 #include <string.h>
 
-int main() {
+int main()
+{
 	char card[3]; // The array size should be 3 not 2 to account for the sentinal character (\0)
 	printf("Enter a card name: ");
 	scanf("%2s", card);

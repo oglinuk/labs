@@ -2,25 +2,30 @@
 #include <iostream>
 #include <string>
 
-class Programmer {
+class Programmer 
+{
     public:
         /* Getters */
-        std::string getName() {
+        std::string getName()
+        {
             return this->name;
         }
 
-        std::string getLanguage() {
+        std::string getLanguage()
+        {
             return this->language;
         }
         
         /* Setters */
-        void setName(std::string n) {
+        void setName(std::string n)
+        {
             name = n;
         }
 
         /* Constructors */
         Programmer(){}
-        Programmer(std::string n) {
+        Programmer(std::string n)
+        {
             this->setName(n);
         }
 

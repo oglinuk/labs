@@ -10,7 +10,8 @@ Differences between fgets and scanf:
   fgets handles spaces just fine
 
 */
-int main() {
+int main()
+{
 	char something[7];
 	printf("Type something: ");
 	fgets(something, 7, stdin);

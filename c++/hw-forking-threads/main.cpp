@@ -3,13 +3,15 @@
 #include <unistd.h>
 #include <vector>
 
-void printSomething(int i) {
+void printSomething(int i)
+{
     // Not thread-safe to use printf
     // Also see https://en.wikipedia.org/wiki/Race_condition 
     std::cout << "Printing " << i << std::endl << std::endl;
 }
 
-void spawnThreads(int j) {
+void spawnThreads(int j)
+{
     std::vector<std::thread> t;
 
     for(int i = 0; i < j; i++) {
@@ -23,7 +25,8 @@ void spawnThreads(int j) {
 }
 
 // Question: How many times will spawnThreads be called?
-int main() {
+int main()
+{
     fork();
     fork();
     spawnThreads(3);

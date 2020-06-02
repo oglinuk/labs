@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <unistd.h>
 
-void powerup(int* level) {
+void powerup(int* level)
+{
 	++*level;
 }
 
-int main() {
+int main()
+{
 	int power_level = 8998;
 
 	printf("The memory address of power_level is: %p\n", &power_level);

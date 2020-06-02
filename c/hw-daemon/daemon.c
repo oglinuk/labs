@@ -1,6 +1,7 @@
 #include "daemon.h"
 
-void init_daemon() {
+void init_daemon()
+{
 	pid_t pid, sid;
 
 	// man syslog

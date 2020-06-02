@@ -1,11 +1,13 @@
 #include <stdio.h>
 
-void say(char thing[]) {
+void say(char thing[])
+{
 	printf("%s from hw-sizeof!\n", thing);
 	printf("The sizeof things pointer is %li bytes ...\n", sizeof(thing));
 }
 
-int main() {
+int main()
+{
 	char thing[12] = "Hello world";
 	say(thing);
 	printf("The sizeof things value is %li bytes ...\n", sizeof(thing));

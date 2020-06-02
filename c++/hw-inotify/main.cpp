@@ -7,19 +7,8 @@
 #define EVENT_SIZE (sizeof(struct inotify_event))
 #define BUF_LEN MAX_EVENT*(EVENT_SIZE+NAME_LEN)
 
-void observe(char const *path);
-
-int main(int argc, char const *argv[]) {
-    if(argc < 2) {
-        printf("Usage: ./main <dir/file path>\n");
-        return 1;
-    }
-    observe(argv[1]);
-
-    return 0;
-}
-
-void observe(char const *path) {
+void observe(char const *path)
+{
     int fd, wd, i, length;
     char buffer[BUF_LEN];
 
@@ -75,4 +64,15 @@ void observe(char const *path) {
     }
     inotify_rm_watch(fd, wd);
     close(fd);
+}
+
+int main(int argc, char const *argv[])
+{
+    if(argc < 2) {
+        printf("Usage: ./main <dir/file path>\n");
+        return 1;
+    }
+    observe(argv[1]);
+
+    return 0;
 }

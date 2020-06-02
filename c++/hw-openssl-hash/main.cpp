@@ -6,7 +6,8 @@
 #include <string>
 #include <openssl/sha.h>
 
-std::string sha256(const std::string str) {
+std::string sha256(const std::string str)
+{
     unsigned char hash[SHA256_DIGEST_LENGTH];
     SHA256_CTX sha256;
     SHA256_Init(&sha256);
@@ -22,7 +23,9 @@ std::string sha256(const std::string str) {
 }
 
 // Compile w/ g++ -o main main.cpp -lssl -lcrypto
-int main() {
+int main()
+{
     std::cout << sha256("Hello world!") << std::endl;
+    
     return 0;
 }

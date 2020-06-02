@@ -1,7 +1,8 @@
 #include <string>
 #include <unistd.h>
 
-int main() {
+int main()
+{
     // man fork
     fork();
     fork();

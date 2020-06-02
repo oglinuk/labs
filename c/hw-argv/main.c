@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main(int argc, char const *argv[]) {
+int main(int argc, char const *argv[])
+{
 	if (argc < 2) {
 		puts("Usage: ./main <arg1> <arg2> ...");
 		return 1;

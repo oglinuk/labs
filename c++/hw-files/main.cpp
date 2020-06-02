@@ -1,7 +1,8 @@
 #include <iostream>
 #include <fstream>
 
-int main() {    
+int main()
+{    
     std::ofstream hwoFile("hwFiles.txt");
     std::ifstream hwiFile("hwFiles.txt");
 

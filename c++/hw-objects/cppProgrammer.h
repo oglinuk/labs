@@ -1,11 +1,14 @@
 #include "programmer.h"
 
-class cppProgrammer: public Programmer {
+class cppProgrammer: public Programmer
+{
     public:
-        cppProgrammer() : Programmer() {
+        cppProgrammer() : Programmer()
+        {
             this->language = "C++";
         };
-        cppProgrammer(std::string n) : Programmer(n) {
+        cppProgrammer(std::string n) : Programmer(n)
+        {
             this->language = "C++";
             this->setName(n);
         };

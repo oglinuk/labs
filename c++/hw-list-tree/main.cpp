@@ -5,7 +5,8 @@
 #include <string>
 #include <unistd.h>
 
-bool check(dirent *e) {
+bool check(dirent *e)
+{
     if(strcmp(e->d_name, "..") != 0 &&
         strcmp(e->d_name, ".") != 0 &&
         e->d_type == DT_DIR) {
@@ -14,7 +15,8 @@ bool check(dirent *e) {
     return 0;
 }
 
-void list_tree(const char * root) {
+void list_tree(const char * root)
+{
     DIR * d;
 
     d = opendir(root);
@@ -59,7 +61,8 @@ void list_tree(const char * root) {
     }
 }
 
-int main(int argc, char const *argv[]) {
+int main(int argc, char const *argv[])
+{
     if(argc < 2) {
         printf("Usage: ./main <root path>\n");
         return 1;

@@ -1,6 +1,7 @@
 #include "hello.h"
 
-int main() {
+int main()
+{
     Hello h;
     h.printHello();
 

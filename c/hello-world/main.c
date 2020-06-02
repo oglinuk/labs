@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	puts("Hello world from hello-world.c!");
 	return 0;
 }

@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	int num;
 	int meaning_of_life = 42;
 	printf("Enter a number: ");

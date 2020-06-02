@@ -1,11 +1,14 @@
 #include "programmer.h"
 
-class goProgrammer: public Programmer {
+class goProgrammer: public Programmer
+{
     public:
-        goProgrammer() : Programmer() {
+        goProgrammer() : Programmer()
+        {
             this->language = "Go";
         };
-        goProgrammer(std::string n) : Programmer(n) {
+        goProgrammer(std::string n) : Programmer(n)
+        {
             this->language = "Go";
             this->setName(n);
         };

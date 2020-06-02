@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	char language = 'c';
 	switch(language) {
 	case 'g':

@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	int num;
 	printf("Enter your a number between 1 and 7: ");
 	scanf("%i", &num);

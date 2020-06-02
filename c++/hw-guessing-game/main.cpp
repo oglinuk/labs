@@ -1,22 +1,7 @@
 #include <iostream>
 
-void play();
-int32_t getGuess();
-bool again();
-
-int main() {
-    bool doAgain = 1;
-
-    while(doAgain == 1){
-        system("clear");
-        play();
-        doAgain = again();
-    };
-
-    return 0;
-}
-
-void play() {
+void play()
+{
     srand(time(NULL)); // Setting the seed
     int32_t rngNum = rand() % 10; // Generate random number between 0-10
     int32_t guesses = 0;
@@ -39,7 +24,8 @@ void play() {
     };
 }
 
-int32_t getGuess() {
+int32_t getGuess()
+{
     int32_t guess = -1;
 
     printf("Guess: ");
@@ -56,7 +42,8 @@ int32_t getGuess() {
     return guess;
 }
 
-bool again() {
+bool again()
+{
     char ans = 'n';
     
     printf("Play again? [y/N]: ");
@@ -68,4 +55,17 @@ bool again() {
             
     system("clear");
     return false;
+}
+
+int main()
+{
+    bool doAgain = 1;
+
+    while(doAgain == 1){
+        system("clear");
+        play();
+        doAgain = again();
+    };
+
+    return 0;
 }

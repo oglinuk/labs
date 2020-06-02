@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-void indexing() {
+void indexing()
+{
 	int numbers[] = {1, 3, 5, 7, 9};
 
 	printf("numbers[3] = %i\n", numbers[3]);
@@ -9,7 +10,8 @@ void indexing() {
 	printf("*(3 + numbers) = %i\n", *(3 + numbers));
 }
 
-void knowing() {
+void knowing()
+{
 	int known[] = {3, 5, 9};
 	int *unknown = known;
 
@@ -23,7 +25,8 @@ void knowing() {
 	printf("The unknown number is %i!\n", known[2]);
 }
 
-int main() {
+int main()
+{
 	knowing();
 	indexing();
 	return 0;

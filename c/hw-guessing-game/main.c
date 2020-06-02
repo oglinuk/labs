@@ -3,7 +3,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-int again() {
+int again()
+{
 	char ans[2];
 
 	printf("Play again? [y/N]: ");
@@ -16,7 +17,8 @@ int again() {
 	return 1;
 }
 
-int get_guess() {
+int get_guess()
+{
 	int guess = 0;
 
 	printf("Guess: ");
@@ -25,7 +27,8 @@ int get_guess() {
 	return guess;
 }
 
-void new_game() {
+void new_game()
+{
 	system("clear");
 	srand(time(NULL));
 	int rng_num = rand() % 10;
@@ -44,7 +47,8 @@ void new_game() {
 	}
 }
 
-int main() {
+int main()
+{
 	int play = 1;
 
 	do {

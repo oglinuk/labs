@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <unistd.h>
 
-int main() {
+int main()
+{
 	unsigned long int a, b, c, i;
 	a = 0;
 	b = 1;

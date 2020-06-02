@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <pthread.h>
 
-void *say_hw(int *id) {
+void *say_hw(int *id)
+{
 	printf("Hello world from hw-thread[%d] in C!\n", &id);
 }
 
-int main() {
+int main()
+{
 	int num_threads = 7;
 	int i;
 	pthread_t tid;

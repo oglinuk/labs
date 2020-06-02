@@ -2,12 +2,14 @@
 #include <thread>
 #include <vector>
 
-void printSomething(int i) {
+void printSomething(int i)
+{
     printf("Hello world from C++ concurrency number %d\n\n", i); 
 }
 
 /* Compile with g++ -o main main.cpp -lpthread && run a couple times! */
-int main() {
+int main()
+{
    std::vector<std::thread> t;
 
    for(int i = 0; i < 7; i++) {

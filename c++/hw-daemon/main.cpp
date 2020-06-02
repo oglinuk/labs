@@ -1,5 +1,6 @@
 #include "daemon.h"
 
-main() {
+main()
+{
     initDaemon();
 }

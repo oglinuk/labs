@@ -2,14 +2,16 @@
 #include <stdlib.h>
 #include <time.h>
 
-int is_larger(int n) {
+int is_larger(int n)
+{
 	if(n > 42) {
 		return 1;
 	}
 	return 0;	
 }
 
-int main() {
+int main()
+{
 	srand(time(NULL));
 	int number = rand() % 84;
 	if(is_larger(number)) {

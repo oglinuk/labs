@@ -1,6 +1,7 @@
 #include <unistd.h>
 
-int main() {
+int main()
+{
     char *argv[] = {
         "ls",
         NULL

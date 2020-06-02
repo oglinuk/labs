@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <unistd.h>
 
-int main() {
+int main()
+{
 	int count;
 	while(1) {
 		printf("On the count to infinity, I am up to %i\n", count);
