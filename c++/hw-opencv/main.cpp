@@ -2,7 +2,8 @@
 
 using namespace cv;
 
-int main(int argc, char const *argv[]) {
+int main(int argc, char const *argv[])
+{
     if (argc < 2) {
         printf("Usage: ./OpenCVDisplayImg <image_path>\n");
         return -1;
