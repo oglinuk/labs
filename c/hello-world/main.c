@@ -2,6 +2,6 @@
 
 int main()
 {
-	puts("Hello world from hello-world.c!");
+	puts("Hello world from hello-world in C!");
 	return 0;
 }

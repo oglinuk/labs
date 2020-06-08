@@ -10,7 +10,7 @@ int again()
 	printf("Play again? [y/N]: ");
 	scanf("%1s", ans);
 
-	if(tolower(ans[0]) == 'y') {
+	if (tolower(ans[0]) == 'y') {
 		return 0;
 	}
 
@@ -34,10 +34,10 @@ void new_game()
 	int rng_num = rand() % 10;
 	int guess = -1;
 	int guesses = 0;
-	while	(guess != rng_num) {
+	while (guess != rng_num) {
 		guess = get_guess();
 		guesses++;
-		if	(guess > rng_num) {
+		if (guess > rng_num) {
 			puts("Guess was too high!");
 		} else if (guess < rng_num) {
 			puts("Guess was too low!");
@@ -54,7 +54,7 @@ int main()
 	do {
 		new_game();
 		play = again();
-	} while(play == 0);
+	} while (play == 0);
 
 	return 0;
 }

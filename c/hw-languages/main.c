@@ -3,7 +3,7 @@
 int main()
 {
 	char language = 'c';
-	switch(language) {
+	switch (language) {
 	case 'g':
 		puts("Golang!");
 		break;

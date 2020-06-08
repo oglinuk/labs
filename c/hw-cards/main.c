@@ -10,9 +10,9 @@ int main()
 	scanf("%2s", card);
 	int cards_value;
 	int card_count;
-	if(tolower(card[0]) == 'k' || tolower(card[0]) == 'q' || tolower(card[0]) == 'j') {
+	if (tolower(card[0]) == 'k' || tolower(card[0]) == 'q' || tolower(card[0]) == 'j') {
 		cards_value = 10;
-	} else if(tolower(card[0]) == 'a') {
+	} else if (tolower(card[0]) == 'a') {
 		cards_value = 11;
 	} else {
 		cards_value = atoi(card);
@@ -22,9 +22,9 @@ int main()
 		}
 	}
 	
-	if((cards_value > 1) && (cards_value < 7)) {
+	if ((cards_value > 1) && (cards_value < 7)) {
 		puts("Count +1 ...");
-	} else if((cards_value > 9) && (cards_value < 12)) {
+	} else if ((cards_value > 9) && (cards_value < 12)) {
 		puts("Count -1 ...");
 	} else {
 		puts("Count hasn't changed ...");

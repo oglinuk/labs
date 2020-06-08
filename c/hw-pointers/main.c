@@ -13,7 +13,7 @@ int main()
 	printf("The memory address of power_level is: %p\n", &power_level);
 	printf("The value of power_level is: %d\n", power_level);
 
-	while(power_level < 9000) {
+	while (power_level < 9000) {
 		powerup(&power_level);
 		printf("The power level is only %d ...\n", power_level);
 		sleep(1);

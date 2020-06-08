@@ -5,7 +5,7 @@ int main()
 	int num;
 	printf("Enter your a number between 1 and 7: ");
 	scanf("%i", &num);
-	switch(num) {
+	switch (num) {
 	case 1:
 		puts("Do you know of Smitty Werbenjagermanjensen? He was #1!");
 		break;

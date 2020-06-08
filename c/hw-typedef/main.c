@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-struct person {
+typedef struct professional_programmer {
 	const char *name;
 	const char *programming_language;
 	int age;
-};
+} programmer;
 
-void print_info(struct person p)
+void print_info(programmer p)
 {
 	fprintf(stdout, "%s is %i and likes to program using %s!\n",
 		p.name, p.age, p.programming_language);
@@ -14,7 +14,7 @@ void print_info(struct person p)
 
 int main()
 {
-	struct person bob = {"Bob", "C", 42};
+	programmer bob = {"Bob", "C", 42};
 	print_info(bob);
 	return 0;
 }
