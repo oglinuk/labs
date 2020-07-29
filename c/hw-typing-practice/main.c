@@ -67,7 +67,7 @@ int main()
 		char *word = get_rand_word(total_lines);
 
 		// TODO: Figure out a way to format better
-		printf("%s ", word);
+		printf("%s", word);
 		scanf("%10s", typed);
 
 		if (strcmp(typed, word)) {

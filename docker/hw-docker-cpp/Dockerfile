@@ -1,6 +1,7 @@
-FROM ubuntu:18.04
-ADD . /src
-WORKDIR /src
+FROM ubuntu:20.04
+ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y build-essential cmake
-RUN cmake . && make
+ADD . /src
+WORKDIR /src/build
+RUN cmake .. && make
 CMD ["./main"]
