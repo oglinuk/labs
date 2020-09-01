@@ -8,7 +8,7 @@ struct person {
 
 void print_info(struct person p)
 {
-	fprintf(stdout, "%s is %i and likes to program using %s!\n",
+	printf("%s is %i and likes to program using %s!\n",
 		p.name, p.age, p.programming_language);
 }
 

@@ -13,7 +13,7 @@ int get_line_count()
 	f = fopen(FILE_NAME, "r");
 	if (f == NULL) {
 		fprintf(stderr, "main.c::get_line_count::%s::NULL ...\n", FILE_NAME);
-		return 1;
+		return -1;
 	}
 
 	int line_count = 0;
@@ -39,6 +39,7 @@ char* get_rand_word(int total_lines)
 	f = fopen(FILE_NAME, "r");
 	if (f == NULL) {
 		fprintf(stderr, "main.c::get_rand_word::%s::NULL ...\n", FILE_NAME);
+		return NULL;
 	}
 
 	srand(time(NULL));
@@ -57,7 +58,11 @@ char* get_rand_word(int total_lines)
 int main()
 {
 	int total_lines = get_line_count();
-	int timer = time(NULL) + 10;
+	if (total_lines == -1) {
+		return 1;
+	}
+
+	int timer = time(NULL) + 60;
 	int total = 0;
 	int total_correct = 0;
 	char typed[15];
@@ -65,10 +70,12 @@ int main()
 	while (1) {
 		total++;
 		char *word = get_rand_word(total_lines);
+		if (word == NULL) {
+			return 1;
+		}
 
-		// TODO: Figure out a way to format better
 		printf("%s", word);
-		scanf("%10s", typed);
+		scanf("%15s", typed); // TODO: Replace scanf
 
 		if (strcmp(typed, word)) {
 			total_correct++;
