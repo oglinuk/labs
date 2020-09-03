@@ -1,6 +1,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <time.h>
 
 const char *FILE_NAME = "word_list.txt";
@@ -75,7 +76,8 @@ int main()
 		}
 
 		printf("%s", word);
-		scanf("%15s", typed); // TODO: Replace scanf
+		fgets(typed, 15, stdin);
+		typed[strlen(typed)-1] = '\0';
 
 		if (strcmp(typed, word)) {
 			total_correct++;

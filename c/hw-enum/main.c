@@ -39,4 +39,5 @@ int main()
     print_order(pineapples);
     print_order(blueberries);
     print_order(quava_juice);
+    return 0;
 }

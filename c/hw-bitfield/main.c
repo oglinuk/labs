@@ -32,4 +32,6 @@ int main()
         bob.rust_programmer,
         bob.csharp_programmer,
         bob.asm_programmer);
+
+    return 0;
 }

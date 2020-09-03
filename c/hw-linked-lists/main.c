@@ -36,4 +36,5 @@ int main()
     chain4.next = &chain3;
 
     info(&chain0);
+    return 0;
 }

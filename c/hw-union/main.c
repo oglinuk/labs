@@ -25,4 +25,5 @@ int main()
     printf("Order 0: %i %s\n", pineapples.amount.count, pineapples.name);
     printf("Order 1: %2.2f lbs of %s\n", blueberries.amount.weight, blueberries.name);
     printf("Order 2: %2.2f litres of %s\n", quava_juice.amount.volume, quava_juice.name);
+    return 0;
 }

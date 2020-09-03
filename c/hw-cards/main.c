@@ -5,9 +5,10 @@
 
 int main()
 {
-	char card[3]; // The array size should be 3 not 2 to account for the sentinal character (\0)
+	char card[3]; // The array size should be 3 not 2 to account for the sentinel character (\0)
 	printf("Enter a card name: ");
-	scanf("%2s", card);
+	fgets(card, 3, stdin);
+	card[strlen(card)-1] = '\0';
 	int cards_value;
 	int card_count;
 	if (tolower(card[0]) == 'k' || tolower(card[0]) == 'q' || tolower(card[0]) == 'j') {
