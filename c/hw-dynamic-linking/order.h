@@ -1,0 +1,1 @@
+void calc_total(float weight, double price);
