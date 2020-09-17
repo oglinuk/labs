@@ -3,7 +3,7 @@ ADD . /src
 WORKDIR /src
 RUN cmake . && make
 
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 WORKDIR /opt/hello-cpp
 COPY  --from=build /src/main ./
 CMD ["./main"]
