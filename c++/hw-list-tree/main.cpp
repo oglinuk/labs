@@ -7,7 +7,7 @@
 
 bool check(dirent *e)
 {
-    if(strcmp(e->d_name, "..") != 0 &&
+    if (strcmp(e->d_name, "..") != 0 &&
         strcmp(e->d_name, ".") != 0 &&
         e->d_type == DT_DIR) {
             return 1;
@@ -21,30 +21,30 @@ void list_tree(const char * root)
 
     d = opendir(root);
 
-    if(!d) {
+    if (!d) {
         fprintf(stderr, "Cannot open directory '%s': %s\n",
                  root, std::strerror(errno));
         exit(1);
     }
-    while(1) {
+    while (1) {
         struct dirent * entry;
 
         /* "Readdir" gets subsequent entries from "d". */
         entry = readdir(d);
-        if(!entry) {
+        if (!entry) {
             break; // No more entries in this dir
         }
 
-        if(entry->d_type & DT_DIR) {
+        if (entry->d_type & DT_DIR) {
             /* Check that the directory is not "d" or d's parent. */
-            if(check(entry)) {
+            if (check(entry)) {
                 int path_length;
                 char path[PATH_MAX];
 
                 path_length = snprintf(path, PATH_MAX,
                                         "%s/%s", root, entry->d_name);
                 printf("%s\n", path);
-                if(path_length >= PATH_MAX) {
+                if (path_length >= PATH_MAX) {
                     fprintf(stderr, "Path length has got too long.\n");
                     exit(1);
                 }
@@ -54,7 +54,7 @@ void list_tree(const char * root)
         }
     }
     /* After going through all the entries, close the directory. */
-    if(closedir(d)) {
+    if (closedir(d)) {
         fprintf(stderr, "Could not close '%s': %s\n",
                  root, strerror(errno));
         exit(1);
@@ -63,7 +63,7 @@ void list_tree(const char * root)
 
 int main(int argc, char const *argv[])
 {
-    if(argc < 2) {
+    if (argc < 2) {
         printf("Usage: ./main <root path>\n");
         return 1;
     }

@@ -7,7 +7,7 @@ void play()
     int32_t guesses = 0;
     int32_t guess = -1;
 
-     while(guess != rngNum) {
+     while (guess != rngNum) {
         guess = getGuess();
 
         if (guess != rngNum) {
@@ -31,7 +31,7 @@ int32_t getGuess()
     printf("Guess: ");
     std::cin >> guess;
 
-    while(std::cin.fail()) {
+    while (std::cin.fail()) {
         std::cout << "Please enter a number ...\n";
         std::cin.clear(); // Unset failbit; see std::cin.fail()
 
@@ -49,7 +49,7 @@ bool again()
     printf("Play again? [y/N]: ");
     std::cin >> ans;
     
-    if(std::tolower(ans) == 'y') {
+    if (std::tolower(ans) == 'y') {
         return true;
     }
             
@@ -61,7 +61,7 @@ int main()
 {
     bool doAgain = 1;
 
-    while(doAgain == 1){
+    while (doAgain == 1){
         system("clear");
         play();
         doAgain = again();

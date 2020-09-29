@@ -30,12 +30,12 @@ def main():
             guesserGuess = rng.randint(1, 100)
             logger.info("Guess input:%s" %(guesserGuess))
             print(guesserGuess)
-            if(guesserGuess == randomNum):
+            if (guesserGuess == randomNum):
                 numOfGuesses += 1
                 print("It took the mini bot %s guesses!" % (numOfGuesses))
                 logger.info("Number of guesses:%s" % (numOfGuesses))
                 randomNumGuessed = True
-            elif(guesserGuess > randomNum):
+            elif (guesserGuess > randomNum):
                 guesserGuess = rng.randint(1, guesserGuess)
                 numOfGuesses += 1
             else:

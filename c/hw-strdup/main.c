@@ -12,7 +12,7 @@ typedef struct link {
 void info(link *start)
 {
     link *l = start;
-    for(; l != NULL; l = l->next) {
+    for (; l != NULL; l = l->next) {
         printf("Link: %s Size: %i-%i\n", l->name, l->min, l->max);
     }
 }
@@ -36,7 +36,7 @@ void release(link *start)
 {
     link *c = start;
     link *next = NULL;
-    for(; c != NULL; c = next) {
+    for (; c != NULL; c = next) {
         next = c->next;
         free(c->name); // Need to release the name string created with strdup.
         free(c); // If we released c first then c->name wouldn't be reachable.
@@ -53,7 +53,7 @@ int main()
     int min = -8;
     int max = -1;
 
-    for(; fgets(name, 42, stdin) != NULL; c = next) {
+    for (; fgets(name, 42, stdin) != NULL; c = next) {
         name[strlen(name)-1] = '\0';
         next = create(name, (min += 8), (max += 8));
         if (start == NULL) {

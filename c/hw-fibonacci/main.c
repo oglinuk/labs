@@ -8,7 +8,7 @@ int main()
 	b = 1;
 	i = 0;
 
-	while(1) {
+	while (1) {
 		i++;
 		printf("Fibonacci(%li): %li\n", i, a);
 		c = a;

@@ -4,7 +4,7 @@ import numpy as np
 def main():
     cap = cv2.VideoCapture(0)
 
-    while(True):
+    while (True):
         # Capture frames
         _, frame = cap.read()
 

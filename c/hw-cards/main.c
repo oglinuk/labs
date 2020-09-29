@@ -17,7 +17,7 @@ int main()
 		cards_value = 11;
 	} else {
 		cards_value = atoi(card);
-		if(cards_value < 2 || cards_value > 10) {
+		if (cards_value < 2 || cards_value > 10) {
 			printf("We both know %i is not a valid card ...\n", cards_value);
 			return 1;
 		}

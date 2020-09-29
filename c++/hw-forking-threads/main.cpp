@@ -14,12 +14,12 @@ void spawnThreads(int j)
 {
     std::vector<std::thread> t;
 
-    for(int i = 0; i < j; i++) {
+    for (int i = 0; i < j; i++) {
         int k = i; // See what happens when i is used in place of k
         t.push_back(std::thread(printSomething, k));
     }
 
-    for(int i = 0; i < j; i++) {
+    for (int i = 0; i < j; i++) {
         t[i].join();
     }
 }
