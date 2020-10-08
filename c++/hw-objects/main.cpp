@@ -15,6 +15,5 @@ int main() {
 
     juniorDeveloper.Speak();
     juniorDeveloper.Cry();
-
     return 0;
 }

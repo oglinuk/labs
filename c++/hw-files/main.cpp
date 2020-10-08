@@ -20,6 +20,5 @@ int main()
     } else {
         printf("Failed to open hwoFile ...\n");
     }
-
     return 0;
 }

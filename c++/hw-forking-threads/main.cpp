@@ -30,6 +30,5 @@ int main()
     fork();
     fork();
     spawnThreads(3);
-    
     return 0;
 }

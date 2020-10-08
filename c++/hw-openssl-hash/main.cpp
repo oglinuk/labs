@@ -26,6 +26,5 @@ std::string sha256(const std::string str)
 int main()
 {
     std::cout << sha256("Hello world!") << std::endl;
-    
     return 0;
 }

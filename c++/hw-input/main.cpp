@@ -10,6 +10,5 @@ int main()
     std::cin >> name;
 
     printf("Hello %s from the C++ hw-input example!\n", name);
-
     return 0;
 }

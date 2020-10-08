@@ -1,4 +1,4 @@
-#include "daemon.h"
+#include "daemon.hpp"
 
 void initDaemon()
 {

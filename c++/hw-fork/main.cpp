@@ -8,6 +8,5 @@ int main()
     fork();
     fork();
     printf("Hello world from hw-fork!\n");
-
     return 0;
 }

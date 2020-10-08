@@ -1,6 +1,7 @@
-#include "daemon.h"
+#include "daemon.hpp"
 
-main()
+int main()
 {
     initDaemon();
+    return 0;
 }

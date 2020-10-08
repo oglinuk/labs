@@ -21,6 +21,5 @@ int main(int argc, char const *argv[])
     imshow("Image", img);
 
     waitKey(0);
-
     return 0;
 }

@@ -66,6 +66,5 @@ int main()
         play();
         doAgain = again();
     };
-
     return 0;
 }

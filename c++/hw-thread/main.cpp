@@ -10,15 +10,14 @@ void printSomething(int i)
 /* Compile with g++ -o main main.cpp -lpthread && run a couple times! */
 int main()
 {
-   std::vector<std::thread> t;
+    std::vector<std::thread> t;
 
-   for (int i = 0; i < 7; i++) {
-       t.push_back(std::thread(printSomething, i));
-   }
+    for (int i = 0; i < 7; i++) {
+        t.push_back(std::thread(printSomething, i));
+    }
 
-   for (int i = 0; i < 7; i++) {
-       t[i].join();
-   }
-
+    for (int i = 0; i < 7; i++) {
+        t[i].join();
+    }
     return 0;
 }
