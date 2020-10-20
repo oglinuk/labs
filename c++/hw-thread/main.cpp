@@ -7,7 +7,6 @@ void printSomething(int i)
     printf("Hello world from C++ concurrency number %d\n\n", i); 
 }
 
-/* Compile with g++ -o main main.cpp -lpthread && run a couple times! */
 int main()
 {
     std::vector<std::thread> t;
