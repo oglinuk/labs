@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# set vairable to search for log4j files
+log4j=$(sudo locate log4j | grep -v log4js)
+
+#output log4j jar file locations
+echo "$log4j"
+
+#Display md5 hash for log4j jar files
+sudo md5sum "$log4j"

@@ -1,0 +1,30 @@
+#!/bin/bash
+
+foo() {
+	echo "foo"
+}
+
+far() {
+	echo "far"
+}
+
+boo() {
+	echo "boo"
+}
+
+bar() {
+	echo "bar"
+}
+
+cmds="foo far boo bar"
+if [[ -n "$COMP_LINE" ]]; then
+	cl="${COMP_LINE##* }"
+	for c in ${cmds}; do
+		test -z "${cl}" -o "${c}" != "${c#${cl}}" && echo "$c"
+	done
+	exit
+fi
+
+# complete -C ./builtin-tab-completion ./builtin-tab-completion
+# ./builtin-tab-completion *tab* *tab*
+"$@"

@@ -1,17 +1,17 @@
-#!/bin/sh
+#!/bin/bash
 
 # Script to chmod all files in a directory tree to 0644
 
 walkdir() {
-	cd $*
+	cd "$@" || exit 
 	for f in *; do
-		if [ -d $f ]; then
-			walkdir $f
+		if [[ -d "$f" ]]; then
+			walkdir "$f"
 		else
-			chmod 0644 $f
+			chmod 0644 "$f"
 		fi
 	done
-	cd ..
+	cd .. || exit
 }
 
-walkdir $*
+walkdir "$@"
