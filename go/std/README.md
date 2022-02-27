@@ -1,0 +1,194 @@
+# Go Standard Library Labs
+
+* [ ] archive
+	* [ ] tar
+	* [ ] zip
+* [X]  bufio
+* [ ] builtin
+* [ ] bytes
+* [ ] compress
+	* [ ] bzip2
+	* [ ] flate
+	* [ ] gzip
+	* [ ] lzw
+	* [ ] zlib
+* [ ] container
+	* [ ] heap
+	* [ ] list
+	* [ ] ring
+* [ ] context
+* [ ] crypto
+	* [ ] aes
+	* [ ] cipher
+	* [ ] des
+	* [ ] dsa
+	* [ ] ecdsa
+	* [ ] ed25519
+	* [ ] elliptic
+	* [ ] hmac
+	* [ ] md5
+	* [ ] rand
+	* [ ] rc4
+	* [ ] rsa
+	* [ ] sha1
+	* [X] sha256
+	* [ ] sha512
+	* [ ] subtle
+	* [ ] tls
+	* [ ] x509
+	* [ ] x509/pkix
+* [ ] database
+	* [ ] sql
+	* [ ] sql/driver
+* [ ] debug
+	* [ ] dwarf
+	* [ ] elf
+	* [ ] gosym
+	* [ ] macho
+	* [ ] pe
+	* [ ] plan9obj
+* [ ] embed
+* [ ] encoding
+	* [ ] ascii85
+	* [ ] asn1
+	* [ ] base32
+	* [ ] base64
+	* [ ] binary
+	* [ ] csv
+	* [ ] gob
+	* [ ] hex
+	* [X] json
+	* [ ] pem
+	* [ ] xml
+* [ ] errors
+* [ ] expvar
+* [ ] flag
+* [X] fmt
+* [ ] go
+	* [ ] ast
+	* [ ] build
+	* [ ] build/constraint
+	* [ ] constant
+	* [ ] doc
+	* [ ] format
+	* [ ] importer
+	* [ ] parser
+	* [ ] printer
+	* [ ] scanner
+	* [ ] token
+	* [ ] types
+* [ ] hash
+	* [ ] adler32
+	* [ ] crc32
+	* [ ] crc64
+	* [ ] fnv
+	* [ ] maphash
+* [ ] html
+	* [ ] template
+* [ ] image
+	* [ ] color
+	* [ ] color/palette
+	* [ ] gif
+	* [ ] jpeg
+	* [ ] png
+* [ ] index
+	* [ ] suffixarray
+* [ ] io
+	* [ ] fs
+* [X] log
+	* [ ] syslog
+* [ ] math
+	* [ ] big
+	* [ ] bits
+	* [ ] cmplx
+	* [ ] rand
+* [ ] mime
+	* [ ] multipart
+	* [ ] quotedprintable
+* [X] net
+	* [X] http
+	* [ ] http/cgi
+	* [ ] http/cookiejar
+	* [ ] http/fcgi
+	* [ ] http/httptest
+	* [ ] http/httptrace
+	* [ ] http/httputil
+	* [ ] http/pprof
+	* [ ] mail
+	* [ ] rpc
+	* [ ] rpc/jsonrpc
+	* [ ] smtp
+	* [ ] textproto
+	* [ ] url
+* [X] os
+	* [ ] exec
+	* [ ] signal
+	* [ ] user
+* [X] path
+	* [X] filepath
+* [ ] plugin
+* [ ] reflect
+* [ ] regexp
+	* [ ] syntax
+* [ ] runtime
+	* [ ] cgo
+	* [ ] debug
+	* [ ] metrics
+	* [ ] pprof
+	* [ ] race
+	* [ ] trace
+* [ ] sort
+* [ ] strconv
+* [ ] strings
+* [X] sync
+	* [ ] atomic
+* [ ] syscall
+	* [ ] js
+* [ ] testing
+	* [ ] fstest
+	* [ ] iotest
+	* [ ] quick
+* [ ] text
+	* [ ] scanner
+	* [ ] tabwriter
+	* [ ] template
+	* [ ] template/parse
+* [ ] time
+	* [ ] tzdata
+* [ ] unicode
+	* [ ] utf16
+	* [ ] utf8
+* [ ] unsafe
+* [ ] internal
+	* [ ] abi
+	* [ ] buildcfg
+	* [ ] bytealg
+	* [ ] cfg
+	* [ ] cpu
+	* [ ] execabs
+	* [ ] fmtsort
+	* [ ] goexperiment
+	* [ ] goroot
+	* [ ] goversion
+	* [ ] itoa
+	* [ ] lazyregexp
+	* [ ] lazytemplate
+	* [ ] nettrace
+	* [ ] obscuretestdata
+	* [ ] oserror
+	* [ ] poll
+	* [ ] profile
+	* [ ] race
+	* [ ] reflectlite
+	* [ ] singleflight
+	* [ ] syscall/execenv
+	* [ ] syscall/unix
+	* [ ] syscall/windows
+	* [ ] syscall/windows/registry
+	* [ ] syscall/windows/sysdll
+	* [ ] sysinfo
+	* [ ] testenv
+	* [ ] testlog
+	* [ ] trace
+	* [ ] unsafeheader
+	* [ ] xcoff

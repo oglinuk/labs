@@ -1,0 +1,275 @@
+# net 
+
+"Package net provides a portable interface for network I/O, including
+TCP/IP, UDP, domain name resolution, and Unix domain sockets.
+
+Although the package provides access to low-level networking primitives,
+most clients will need only the basic interface provided by the Dial,
+Listen, and Accept functions and the associated Conn and Listener
+interfaces. The crypto/tls package uses the same interfaces and similar
+Dial and Listen functions."
+
+* [ ] constants
+	* [ ] IPv4len
+	* [ ] IPv6len
+* [ ] variables
+	* [ ] IPv4bcast
+	* [ ] IPv4allsys
+	* [ ] IPv4allrouter
+	* [ ] IPv4zero
+	* [ ] IPv6zero
+	* [ ] IPv6unspecified
+	* [ ] IPv6loopback
+	* [ ] IPv6interfacelocalallnodes
+	* [ ] IPv6linklocalallnodes
+	* [ ] IPv6linklocalallrouters
+	* [ ] DefaultResolver
+	* [ ] ErrWriteToConnected
+* [ ] functions
+	* [X] JoinHostPort
+	* [ ] LookupAddr
+	* [ ] LookupCNAME
+	* [ ] LookupHost
+	* [ ] LookupPort
+	* [ ] LookupTXT
+	* [ ] ParseCIDR
+	* [ ] Pipe
+	* [X] SplitHostPort
+* [ ] types
+	* [ ] AddrError 
+		* [ ] Error
+		* [ ] Temporary
+		* [ ] Timeout
+	* [ ] Buffers
+		* [ ] Read
+		* [ ] WriteTo
+	* [ ] Conn
+		* [X] Dial
+		* [ ] DialTimeout
+		* [ ] FileConn
+	* [ ] DNSConfigError
+		* [ ] Error
+		* [ ] Temporary
+		* [ ] Timeout
+		* [ ] Unwrap
+	* [ ] DNSError
+		* [ ] Error
+		* [ ] Temporary
+		* [ ] Timeout
+	* [ ] Dialer
+		* [ ] Dial
+		* [ ] DialContext
+	* [ ] Error
+	* [ ] Flags
+		* [ ] String
+	* [ ] HardwareAddr
+		* [ ] ParseMAC
+		* [ ] String
+	* [ ] IP
+		* [ ] IPv4
+		* [ ] LookupIP
+		* [ ] ParseIP
+		* [ ] DefaultMask
+		* [ ] Equal
+		* [ ] IsGlobalUnicast
+		* [ ] IsInterfaceLocalMulticast
+		* [ ] IsLinkLocalMulticast
+		* [ ] IsLinkLocalUnicast
+		* [ ] IsLoopback
+		* [ ] IsMulticast
+		* [ ] IsPrivate
+		* [ ] IsUnspecified
+		* [ ] MarshalText
+		* [ ] Mask
+		* [ ] String
+		* [ ] To16
+		* [ ] To4
+		* [ ] UnmarshalText
+	* [ ] IPAddr
+		* [ ] ResolveIPAddr
+		* [ ] Network
+		* [ ] String
+	* [ ] IPConn
+		* [ ] Dial
+		* [ ] Listen
+		* [ ] Close
+		* [ ] File
+		* [ ] LocalAddr
+		* [ ] Read
+		* [ ] ReadFrom
+		* [ ] ReadFromIP
+		* [ ] ReadMsgIP
+		* [ ] RemoteAddr
+		* [ ] SetDeadline
+		* [ ] SetReadBuffer
+		* [ ] SetReadDeadline
+		* [ ] SetWriteBuffer
+		* [ ] SetWriteDeadline
+		* [ ] SyscallConn
+		* [ ] Write
+		* [ ] WriteTo
+		* [ ] WriteToIP
+	* [ ] IPMask
+		* [ ] CIDRMask
+		* [ ] IPv4Mask
+		* [ ] Size
+		* [ ] String
+	* [ ] IPNet
+		* [ ] Contains
+		* [ ] Network
+		* [ ] String
+	* [ ] Interface
+		* [ ] InterfaceByIndex
+		* [ ] InterfaceByName
+		* [ ] Interfaces
+		* [ ] Addrs
+		* [ ] MulticastAddrs
+	* [ ] InvalidAddrError
+		* [ ] Error
+		* [ ] Temporary
+		* [ ] Timeout
+	* [ ] ListenConfig
+		* [ ] Listen
+		* [ ] ListenPacket
+	* [ ] Listener
+		* [ ] FileListener
+		* [ ] Listen
+	* [ ] MX
+		* [ ] LookupMX
+	* [ ] NS
+		* [ ] LookupNS
+	* [ ] OpError
+		* [ ] Error
+		* [ ] Temporary
+		* [ ] Timeout
+		* [ ] Unwrap
+	* [ ] PacketConn
+		* [ ] FilePacketConn
+		* [ ] ListenPacket
+	* [ ] ParseError
+		* [ ] Error
+		* [ ] Temporary
+		* [ ] Timeout
+	* [ ] Resolver
+		* [ ] LookupAddr
+		* [ ] LookupCNAME
+		* [ ] LookupHost
+		* [ ] LookupIP
+		* [ ] LookupMX
+		* [ ] LookupNS
+		* [ ] LookupPort
+		* [ ] LookupSRV
+		* [ ] LookupTXT
+	* [ ] SRV
+		* [ ] LookupSRV
+	* [ ] TCPAddr 
+		* [ ] ResolveTCPAddr
+		* [ ] Network
+		* [ ] String
+	* [ ] TCPConn
+		* [ ] DialTCP
+		* [ ] Close
+		* [ ] CloseRead
+		* [ ] CloseWrite
+		* [ ] File
+		* [ ] LocalAddr
+		* [ ] Read
+		* [ ] ReadFrom
+		* [ ] RemoteAddr
+		* [ ] SetDeadline
+		* [ ] SetKeepAlive
+		* [ ] SetKeepAlivePeriod
+		* [ ] SetLinger
+		* [ ] SetNoDelay
+		* [ ] SetReadBuffer
+		* [ ] SetReadDeadline
+		* [ ] SetWriteBuffer
+		* [ ] SetWriteDeadline
+		* [ ] SyscallConn
+		* [ ] Write
+	* [ ] TCPListener
+		* [ ] ListenTCP
+		* [ ] Accept
+		* [ ] AcceptTCP
+		* [ ] Addr
+		* [ ] Close
+		* [ ] File
+		* [ ] SetDeadline
+		* [ ] SyscallConn
+	* [ ] UDPAddr
+		* [ ] ResolveUDPAddr
+		* [ ] Network
+		* [ ] Addr
+	* [ ] UDPConn
+		* [ ] DialUDP
+		* [ ] ListenMulticastUDP
+		* [ ] ListenUDP
+		* [ ] Close
+		* [ ] File
+		* [ ] LocalAddr
+		* [ ] Read
+		* [ ] ReadFrom
+		* [ ] ReadFromUDP
+		* [ ] ReadMsgUDP
+		* [ ] RemoteAddr
+		* [ ] SetDeadline
+		* [ ] SetReadBuffer
+		* [ ] SetReadDeadline
+		* [ ] SetWriteBuffer
+		* [ ] SetWriteDeadline
+		* [ ] SyscallConn
+		* [ ] Write
+		* [ ] WriteMsgUDP
+		* [ ] WriteTo
+		* [ ] WriteToUDP
+	* [ ] UnixAddr
+		* [ ] ResolveUnixAddr
+		* [ ] Network
+		* [ ] String
+	* [ ] UnixConn
+		* [ ] DialUnix
+		* [ ] ListenUnixgram
+		* [ ] Close
+		* [ ] CloseRead
+		* [ ] CloseWrite
+		* [ ] File
+		* [ ] LocalAddr
+		* [ ] Read
+		* [ ] ReadFrom
+		* [ ] ReadFromUnix
+		* [ ] ReadMsgUnix
+		* [ ] RemoteAddr
+		* [ ] SetDeadline
+		* [ ] SetReadBuffer
+		* [ ] SetReadDeadline
+		* [ ] SetWriteBuffer
+		* [ ] SetWriteDeadline
+		* [ ] SyscallConn
+		* [ ] Write
+		* [ ] WriteMsgUnix
+		* [ ] WriteTo
+		* [ ] WriteToUnix
+	* [ ] UnixListener
+		* [ ] ListenUnix
+		* [ ] Accept
+		* [ ] AcceptUnix
+		* [ ] Addr
+		* [ ] Close
+		* [ ] File
+		* [ ] SetDeadline
+		* [ ] SetUnlinkOnClose
+		* [ ] SyscallConn
+	* [ ] UnknownNetworkError
+		* [ ] Error
+		* [ ] Temporary
+		* [ ] Timeout
+* [ ] bugs
+
+Related:
+
+* Package `net`
+	<https://pkg.go.dev/net>
+
+Tags:
+
+	#lab #go #std #net
